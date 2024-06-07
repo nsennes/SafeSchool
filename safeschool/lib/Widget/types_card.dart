@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:safeschool/Utilities/colors_use.dart';
+import 'package:safeschool/Utilities/text_use.dart';
 
 class TypesCard extends StatelessWidget {
   final String title;
@@ -8,10 +9,33 @@ class TypesCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 180,
-      width: 180,
-      decoration: BoxDecoration(color: ColorsUse.secondaryColor),
+    return Padding(
+      padding: const EdgeInsets.only(left: 30.0),
+      child: Container(
+        height: 180,
+        width: 180,
+        decoration: BoxDecoration(
+          color: ColorsUse.secondaryColor,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 8,
+            ),
+            Text(
+              title,
+              style: TextUse.heading_2().merge(
+                const TextStyle(color: ColorsUse.primaryColor),
+              ),
+            ),
+            const SizedBox(
+              height: 3,
+            ),
+            SizedBox(height: 130, width: 130, child: Image.asset(img))
+          ],
+        ),
+      ),
     );
   }
 }
