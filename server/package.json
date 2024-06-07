@@ -11,5 +11,10 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.15.0",
+    "hono": "^4.4.4",
+    "prisma": "^5.15.0"
   }
 }

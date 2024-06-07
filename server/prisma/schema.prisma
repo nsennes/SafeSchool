@@ -1,0 +1,138 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Report {
+  reportId       Int                   @id @default(autoincrement())
+  dateOfIncident DateTime              @db.Date
+  schoolName     String                @db.VarChar(255)
+  province       Report_province
+  gradeLevel     Report_gradeLevel
+  typeOfBullying Report_typeOfBullying
+  whatHappened   String?               @db.Text
+  status         Report_status
+  region         Report_region
+  created_at     DateTime?             @default(now()) @db.Timestamp(0)
+}
+
+model User {
+  userId   Int    @id @default(autoincrement())
+  email    String @db.VarChar(255)
+  password String @db.VarChar(255)
+}
+
+enum Report_province {
+  Bangkok
+  Amnat_Charoen            @map("Amnat Charoen")
+  Ang_Thong                @map("Ang Thong")
+  Bueng_Kan                @map("Bueng Kan")
+  Buriram
+  Chachoengsao
+  Chai_Nat                 @map("Chai Nat")
+  Chaiyaphum
+  Chanthaburi
+  Chiang_Mai               @map("Chiang Mai")
+  Chiang_Rai               @map("Chiang Rai")
+  Chonburi
+  Chumphon
+  Kalasin
+  Kamphaeng_Phet           @map("Kamphaeng Phet")
+  Kanchanaburi
+  Khon_Kaen                @map("Khon Kaen")
+  Krabi
+  Lampang
+  Lamphun
+  Loei
+  Lopburi
+  Mae_Hong_Son             @map("Mae Hong Son")
+  Maha_Sarakham            @map("Maha Sarakham")
+  Mukdahan
+  Nakhon_Nayok             @map("Nakhon Nayok")
+  Nakhon_Pathom            @map("Nakhon Pathom")
+  Nakhon_Phanom            @map("Nakhon Phanom")
+  Nakhon_Ratchasima        @map("Nakhon Ratchasima")
+  Nakhon_Sawan             @map("Nakhon Sawan")
+  Nakhon_Si_Thammarat      @map("Nakhon Si Thammarat")
+  Nan
+  Narathiwat
+  Nong_Bua_Lamphu          @map("Nong Bua Lamphu")
+  Nong_Khai                @map("Nong Khai")
+  Nonthaburi
+  Pathum_Thani             @map("Pathum Thani")
+  Pattani
+  Phang_Nga                @map("Phang Nga")
+  Phatthalung
+  Phayao
+  Phetchabun
+  Phetchaburi
+  Phichit
+  Phitsanulok
+  Phra_Nakhon_Si_Ayutthaya @map("Phra Nakhon Si Ayutthaya")
+  Phrae
+  Phuket
+  Prachinburi
+  Prachuap_Khiri_Khan      @map("Prachuap Khiri Khan")
+  Ranong
+  Ratchaburi
+  Rayong
+  Roi_Et                   @map("Roi Et")
+  Sa_Kaeo                  @map("Sa Kaeo")
+  Sakon_Nakhon             @map("Sakon Nakhon")
+  Samut_Prakan             @map("Samut Prakan")
+  Samut_Sakhon             @map("Samut Sakhon")
+  Samut_Songkhram          @map("Samut Songkhram")
+  Saraburi
+  Satun
+  Sing_Buri                @map("Sing Buri")
+  Sisaket
+  Songkhla
+  Sukhothai
+  Suphan_Buri              @map("Suphan Buri")
+  Surat_Thani              @map("Surat Thani")
+  Surin
+  Tak
+  Trang
+  Trat
+  Ubon_Ratchathani         @map("Ubon Ratchathani")
+  Udon_Thani               @map("Udon Thani")
+  Uthai_Thani              @map("Uthai Thani")
+  Uttaradit
+  Yala
+  Yasothon
+}
+
+enum Report_gradeLevel {
+  grade_7
+  grade_8
+  grade_9
+  grade_10
+  grade_11
+  grade_12
+}
+
+enum Report_typeOfBullying {
+  verbal
+  physical
+  cyber
+  sexual_harassment @map("sexual harassment")
+}
+
+enum Report_status {
+  pending
+  approved
+  rejected
+}
+
+enum Report_region {
+  north
+  south
+  east
+  north_east @map("north east")
+  west
+  central
+}
