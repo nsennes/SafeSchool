@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              height: 225,
+              height: 200,
               decoration: BoxDecoration(
                 color: ColorsUse.primaryColor,
                 boxShadow: [
@@ -31,7 +31,7 @@ class Home extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 1, top: 95),
+                  padding: const EdgeInsets.only(left: 1, top: 75),
                   child: Container(
                     child: Text(
                       "Hi There!",
@@ -64,7 +64,7 @@ class Home extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 38.0, top: 260),
+                      padding: const EdgeInsets.only(left: 38.0, top: 235),
                       child: Text(
                         "How to submit a report?",
                         style: TextUse.heading_2().merge(
@@ -115,15 +115,24 @@ class Home extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 500.0, left: 38),
-                  child: Container(
-                    child: Text(
-                      "Types of Bullying",
-                      style: TextUse.heading_2()
-                          .merge(const TextStyle(color: ColorsUse.accentColor)),
-                    ),
+                  padding: const EdgeInsets.only(top: 475.0, left: 38),
+                  child: Text(
+                    "Types of Bullying",
+                    style: TextUse.heading_2()
+                        .merge(const TextStyle(color: ColorsUse.accentColor)),
                   ),
                 ),
+                const SizedBox(
+                  height: 10,
+                ),
+                // Padding(
+                //   padding: const EdgeInsets.only(left: 30.0),
+                //   child: Container(
+                //     height: 180,
+                //     width: 180,
+                //     decoration: BoxDecoration(color: ColorsUse.secondaryColor),
+                //   ),
+                // )
               ],
             ),
           ],

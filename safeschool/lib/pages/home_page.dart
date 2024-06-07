@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:safeschool/Utilities/colors_use.dart';
+import 'package:safeschool/Utilities/text_use.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -15,14 +17,14 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Column(
         children: [
-          GreetingSection(),
+          const GreetingSection(),
           Expanded(
             child: SingleChildScrollView(
               child: Padding(
-                padding: EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     SubmitReportSection(),
                     SizedBox(height: 20),
                     BullyingTypesSection(),
@@ -110,7 +112,7 @@ class GreetingSection extends StatelessWidget {
                   // Logout logic here
                 },
                 style: ElevatedButton.styleFrom(
-                  foregroundColor: ColorsUse.accentColor, 
+                  foregroundColor: ColorsUse.accentColor,
                   backgroundColor: ColorsUse.backgroundColor,
                   elevation: 5,
                   shape: RoundedRectangleBorder(
@@ -151,10 +153,10 @@ class SubmitReportSection extends StatelessWidget {
         color: Colors.grey[200],
         borderRadius: BorderRadius.circular(8),
       ),
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             'How to submit a report?',
             style: TextStyle(
               fontSize: 20,
@@ -162,31 +164,32 @@ class SubmitReportSection extends StatelessWidget {
               color: ColorsUse.accentColor,
             ),
           ),
-        ),
-        const SizedBox(height: 10),
-        Container(
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: Colors.black,
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: const Text(
-            '1. Tap "Report Incident"\n'
-            '2. Choose the type of bullying.\n'
-            '3. Tell us what happened.\n'
-            '4. (Optional) Add details (photos or screenshots).\n'
-            '5. Review your report.\n'
-            '6. Submit your report.',
-            style: TextStyle(
-              fontSize: 16,
-              color: Colors.white,
+          const SizedBox(height: 10),
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.black,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: const Text(
+              '1. Tap "Report Incident"\n'
+              '2. Choose the type of bullying.\n'
+              '3. Tell us what happened.\n'
+              '4. (Optional) Add details (photos or screenshots).\n'
+              '5. Review your report.\n'
+              '6. Submit your report.',
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.white,
+              ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
+
 class BullyingTypesSection extends StatelessWidget {
   const BullyingTypesSection({super.key});
 
@@ -211,13 +214,15 @@ class BullyingTypesSection extends StatelessWidget {
             child: Row(
               children: [
                 SizedBox(width: 10),
-                BullyingTypeCard(title: 'Physical', image: 'assets/physical.png'),
+                BullyingTypeCard(
+                    title: 'Physical', image: 'assets/physical.png'),
                 SizedBox(width: 10),
                 BullyingTypeCard(title: 'Verbal', image: 'assets/verbal.png'),
                 SizedBox(width: 10),
                 BullyingTypeCard(title: 'Sexual', image: 'assets/sexual.png'),
                 SizedBox(width: 10),
-                BullyingTypeCard(title: 'Emotional', image: 'assets/emotional.png'),
+                BullyingTypeCard(
+                    title: 'Emotional', image: 'assets/emotional.png'),
                 SizedBox(width: 10),
                 // Add more cards as needed
               ],
@@ -227,7 +232,7 @@ class BullyingTypesSection extends StatelessWidget {
       ],
     );
   }
-} 
+}
 
 class BullyingTypeCard extends StatelessWidget {
   final String image;
@@ -243,7 +248,8 @@ class BullyingTypeCard extends StatelessWidget {
         width: 200, // Increased width for larger cards
         margin: const EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(
-          color: ColorsUse.secondaryColor, // Changed background color to black
+          color: ColorsUse
+              .secondaryColor, // Changed background color to secondaryColor
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
@@ -278,4 +284,3 @@ class BullyingTypeCard extends StatelessWidget {
     );
   }
 }
-
