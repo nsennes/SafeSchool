@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:safeschool/Utilities/colors_use.dart';
-import 'package:safeschool/Utilities/text_use.dart';
+//import 'package:safeschool/Utilities/text_use.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _HomePageState createState() => _HomePageState();
 }
 
@@ -15,16 +16,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: const Column(
         children: [
-          const GreetingSection(),
+          GreetingSection(),
           Expanded(
             child: SingleChildScrollView(
               child: Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     SubmitReportSection(),
                     SizedBox(height: 20),
                     BullyingTypesSection(),
@@ -35,6 +36,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+      
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: ColorsUse.secondaryColor,
         selectedItemColor: ColorsUse.primaryColor,
@@ -184,6 +186,7 @@ class SubmitReportSection extends StatelessWidget {
               ),
             ),
           ),
+         
         ],
       ),
     );
@@ -204,8 +207,10 @@ class BullyingTypesSection extends StatelessWidget {
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: ColorsUse.accentColor,
+            
           ),
         ),
+        
         SizedBox(height: 10),
         SizedBox(
           height: 200,

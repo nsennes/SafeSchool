@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:safeschool/Utilities/colors_use.dart';
 import 'package:safeschool/pages/home.dart';
 import 'package:safeschool/pages/home_page.dart';
+import 'package:safeschool/components/buttons.dart';
+import 'package:safeschool/components/popup_buttons.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +31,15 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: ("Rubik"),
       ),
+<<<<<<< Updated upstream
       home: const Home(),
     );
+=======
+      home: const Scaffold(
+        body: SecondaryButton(name: "Submit Report", primary: ColorsUse.accentColor, textColor: ColorsUse.secondaryColor,),
+      
+    ),
+      );
+>>>>>>> Stashed changes
   }
 }
