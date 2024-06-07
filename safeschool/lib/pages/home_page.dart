@@ -109,7 +109,7 @@ class SubmitReportSection extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.grey[200],
+        color: ColorsUse.accentColor,
         borderRadius: BorderRadius.circular(8),
       ),
       child: const Column(
