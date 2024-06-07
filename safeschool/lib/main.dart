@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:safeschool/Utilities/colors_use.dart';
+<<<<<<< Updated upstream
 import 'package:safeschool/pages/home.dart';
+=======
+import 'package:safeschool/pages/home_page.dart';
+>>>>>>> Stashed changes
 
 void main() {
   runApp(const MyApp());
