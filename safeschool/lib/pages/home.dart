@@ -44,6 +44,11 @@ class Home extends StatelessWidget {
                     ),
                   ),
                 ),
+                // SizedBox(
+                //   height: 150,
+                //   width: 150,
+                //   child: Image.asset("assets/images/greeting.png"),
+                // )
                 const SizedBox(
                   height: 10,
                 ),
@@ -57,6 +62,18 @@ class Home extends StatelessWidget {
                     ),
                   ),
                 ),
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 220, top: 42.0),
+                  child: SizedBox(
+                      height: 160,
+                      width: 160,
+                      child: Image.asset("assets/images/greeting.png")),
+                )
               ],
             ),
             Column(
@@ -140,42 +157,14 @@ class Home extends StatelessWidget {
                           title: "Cyber",
                           img: "assets/images/cyber_Bullying.png"),
                       TypesCard(
-                          title: "Sexual", img: "assets/images/sh_Bullying.png")
+                          title: "Sexual H.",
+                          img: "assets/images/sh_Bullying.png"),
+                      SizedBox(
+                        width: 15,
+                      )
                     ],
                   ),
                 )
-                // Padding(
-                //   padding: const EdgeInsets.only(left: 30.0),
-                //   child: Container(
-                //     height: 180,
-                //     width: 180,
-                //     decoration: BoxDecoration(
-                //       color: ColorsUse.secondaryColor,
-                //       borderRadius: BorderRadius.circular(10),
-                //     ),
-                //     child: Column(
-                //       children: [
-                //         const SizedBox(
-                //           height: 8,
-                //         ),
-                //         Text(
-                //           "Physical",
-                //           style: TextUse.heading_2().merge(
-                //             const TextStyle(color: ColorsUse.primaryColor),
-                //           ),
-                //         ),
-                //         const SizedBox(
-                //           height: 3,
-                //         ),
-                //         SizedBox(
-                //             height: 130,
-                //             width: 130,
-                //             child: Image.asset(
-                //                 "assets/images/physical_Bullying.png"))
-                //       ],
-                //     ),
-                //   ),
-                // ),
               ],
             ),
           ],
