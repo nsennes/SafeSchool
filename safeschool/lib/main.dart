@@ -4,6 +4,7 @@ import 'package:safeschool/pages/home.dart';
 import 'package:safeschool/pages/home_page.dart';
 import 'package:safeschool/components/buttons.dart';
 import 'package:safeschool/components/popup_buttons.dart';
+import 'package:safeschool/registrations/first_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,10 +33,7 @@ class MyApp extends StatelessWidget {
         fontFamily: ("Rubik"),
       ),
 
-      home: const Scaffold(
-        body: PrimaryButton(name: "Submit Report", primary: ColorsUse.primaryColor, textColor: ColorsUse.secondaryColor,),
-      
-    ),
+      home: FirstPage(),
       );
 
 
