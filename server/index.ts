@@ -1,6 +1,7 @@
 const st = new Date().getTime();
 import { Hono } from 'hono';
 import { logger } from 'hono/logger';
+import report from './routes/report.routes';
 
 const app = new Hono({ strict: false });
 app.use(logger());
@@ -11,6 +12,8 @@ app.get('/', (c) =>
 		message: 'Welcome to Hono',
 	})
 );
+
+app.route('/report', report);
 
 const en = new Date().getTime();
 
