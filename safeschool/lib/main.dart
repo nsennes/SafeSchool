@@ -31,13 +31,13 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: ("Rubik"),
       ),
+
       home: const Scaffold(
-        body: SecondaryButton(
-          name: "Submit Report",
-          primary: ColorsUse.accentColor,
-          textColor: ColorsUse.secondaryColor,
-        ),
-      ),
-    );
+        body: PrimaryButton(name: "Submit Report", primary: ColorsUse.primaryColor, textColor: ColorsUse.secondaryColor,),
+      
+    ),
+      );
+
+
   }
 }

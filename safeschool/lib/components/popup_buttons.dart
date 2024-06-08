@@ -34,9 +34,10 @@ class _SecondaryButtonState extends State<SecondaryButton> {
         color: Colors.transparent, // Ensures the splash effect is visible
         child: InkWell(
           splashFactory: InkRipple.splashFactory,
-          customBorder: const StadiumBorder(),
+          customBorder: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
           splashColor: Colors.white,
-          borderRadius: BorderRadius.circular(10.0),
           onTapDown: (_) {
             setState(() {
               _isPressed = true;
@@ -55,10 +56,7 @@ class _SecondaryButtonState extends State<SecondaryButton> {
           onTap: () {
             // Add your onTap functionality here
           },
-          child: AnimatedContainer(
-            duration: const Duration(milliseconds: 500),
-            height: 44,
-            width: 243,
+          child: Ink(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
               color: onPrimary,
@@ -66,12 +64,17 @@ class _SecondaryButtonState extends State<SecondaryButton> {
                   ? Border.all(color: ColorsUse.accentColor, width: 2.0)
                   : null,
             ),
-            child: Center(
-              child: Text(
-                widget.name,
-                style: TextUse.heading_3().copyWith(color: widget.textColor),
-                textAlign: TextAlign.center,
-                maxLines: 1,
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 50),
+              height: 44,
+              width: 243,
+              child: Center(
+                child: Text(
+                  widget.name,
+                  style: TextUse.heading_3().copyWith(color: widget.textColor),
+                  textAlign: TextAlign.center,
+                  maxLines: 1,
+                ),
               ),
             ),
           ),
