@@ -2,6 +2,7 @@ const st = new Date().getTime();
 import { Hono } from 'hono';
 import { logger } from 'hono/logger';
 import report from './routes/report.routes';
+import auth from './routes/auth.routes';
 
 const app = new Hono({ strict: false });
 app.use(logger());
@@ -14,6 +15,7 @@ app.get('/', (c) =>
 );
 
 app.route('/report', report);
+app.route('auth',auth);
 
 const en = new Date().getTime();
 
