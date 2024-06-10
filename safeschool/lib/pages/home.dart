@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:safeschool/Utilities/colors_use.dart';
 import 'package:safeschool/Utilities/text_use.dart';
-import 'package:safeschool/Widget/types_card.dart';
+import 'package:safeschool/Widgets/types_card.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key});
