@@ -33,6 +33,10 @@ class ReviewPopup extends StatelessWidget {
                 offset: Offset(0.0, 10.0),
               ),
             ],
+            border: Border.all(
+              color: ColorsUse.accentColor,
+              width: 2,
+            ),
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -43,7 +47,7 @@ class ReviewPopup extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).pop();
                   },
-                  child: const Icon(Icons.close, color: ColorsUse.accentColor,),
+                  child: const Icon(Icons.close, color: ColorsUse.accentColor),
                 ),
               ),
               Text(
@@ -70,6 +74,10 @@ class ReviewPopup extends StatelessWidget {
                       offset: const Offset(0, 3),
                     ),
                   ],
+                  border: Border.all(
+                    color: ColorsUse.accentColor,
+                    width: 2,
+                  ),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,7 +89,7 @@ class ReviewPopup extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 22),
+              const SizedBox(height: 10),
               Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
@@ -95,6 +103,10 @@ class ReviewPopup extends StatelessWidget {
                       offset: const Offset(0, 3),
                     ),
                   ],
+                  border: Border.all(
+                    color: ColorsUse.accentColor,
+                    width: 2,
+                  ),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
