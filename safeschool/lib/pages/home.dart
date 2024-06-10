@@ -10,7 +10,6 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        // Change Expanded to Column
         children: [
           Expanded(
             child: Stack(
@@ -45,11 +44,6 @@ class Home extends StatelessWidget {
                         ),
                       ),
                     ),
-                    // SizedBox(
-                    //   height: 150,
-                    //   width: 150,
-                    //   child: Image.asset("assets/images/greeting.png"),
-                    // )
                     const SizedBox(
                       height: 10,
                     ),
