@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:safeschool/Utilities/colors_use.dart';
+import 'package:safeschool/Widgets/bottom_navbar.dart';
 //import 'package:safeschool/Utilities/text_use.dart';
 //import 'package:safeschool/components/text_form_fields.dart';
 //mport 'package:safeschool/components/date_form_fields.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: "Rubik",
       ),
-      home: SuccessPopup(), 
+      home: BottomNavbar(),
     );
   }
 }
