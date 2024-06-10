@@ -6,11 +6,16 @@ import 'package:safeschool/Widgets/bottom_navbar.dart';
 //mport 'package:safeschool/components/date_form_fields.dart';
 //import 'package:safeschool/components/long_text_form_field.dart';
 //import 'package:safeschool/components/review_report_msg.dart';
+<<<<<<< Updated upstream
 import 'package:safeschool/components/report_success_popup.dart';
 import 'package:safeschool/pages/bullying_types/physical.dart';
 import 'package:safeschool/pages/bullying_types/verbal.dart';
 import 'package:safeschool/pages/bullying_types/cyber.dart';
 import 'package:safeschool/pages/bullying_types/sexual_h.dart';
+=======
+//import 'package:safeschool/components/report_success_popup.dart';
+import 'package:safeschool/registrations/sign_in_page.dart';
+>>>>>>> Stashed changes
 
 void main() {
   runApp(MyApp());
@@ -43,6 +48,7 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: "Rubik",
       ),
+<<<<<<< Updated upstream
       routes: {
         '/bullying_types/physical': (context) => const Physical(),
         '/bullying_types/verbal': (context) => const Verbal(),
@@ -50,6 +56,9 @@ class MyApp extends StatelessWidget {
         '/bullying_types/sexual_h': (context) => const SexualH(),
       },
       home: const BottomNavbar(),
+=======
+      home: SignInScreen(),
+>>>>>>> Stashed changes
     );
   }
 }
