@@ -4,18 +4,19 @@ import 'package:safeschool/Utilities/colors_use.dart';
 //import 'package:safeschool/components/text_form_fields.dart';
 //mport 'package:safeschool/components/date_form_fields.dart';
 //import 'package:safeschool/components/long_text_form_field.dart';
-import 'package:safeschool/components/review_report_msg.dart';
+//import 'package:safeschool/components/review_report_msg.dart';
+import 'package:safeschool/components/report_success_popup.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
-  final TextEditingController confirmPasswordController = TextEditingController();
-  final TextEditingController dateController = TextEditingController();
-  final TextEditingController gradeController = TextEditingController();
+  // final TextEditingController emailController = TextEditingController();
+  // final TextEditingController passwordController = TextEditingController();
+  // final TextEditingController confirmPasswordController = TextEditingController();
+  // final TextEditingController dateController = TextEditingController();
+  // final TextEditingController gradeController = TextEditingController();
   final TextEditingController longTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: "Rubik",
       ),
-      home: ReviewPopup(), 
+      home: SuccessPopup(), 
     );
   }
 }
