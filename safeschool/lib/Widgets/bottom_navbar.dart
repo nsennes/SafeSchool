@@ -48,7 +48,7 @@ class CustomNavigationDestination extends StatelessWidget {
 }
 
 class BottomNavbar extends StatefulWidget {
-  const BottomNavbar({super.key});
+  const BottomNavbar({super.key, required int initialIndex});
 
   @override
   State<BottomNavbar> createState() => _BottomNavbarState();

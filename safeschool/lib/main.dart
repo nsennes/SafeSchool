@@ -14,6 +14,7 @@ import 'package:safeschool/pages/bullying_types/verbal.dart';
 import 'package:safeschool/pages/bullying_types/cyber.dart';
 import 'package:safeschool/pages/bullying_types/sexual_h.dart';
 import 'package:safeschool/registrations/register_page.dart';
+import 'package:safeschool/pages/report_incident.dart';
 
 
 void main() {
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Rubik",
       ),
 
-      home: RegisterScreen(),
+      home: const ReportIncident(),
     );
   }
 }
