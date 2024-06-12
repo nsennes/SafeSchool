@@ -7,7 +7,6 @@ import 'package:safeschool/components/text_form_fields.dart';
 import 'package:safeschool/components/long_text_form_field.dart';
 import 'package:safeschool/components/buttons.dart';
 
-
 class ReportIncident extends StatefulWidget {
   const ReportIncident({super.key});
 
@@ -18,22 +17,28 @@ class ReportIncident extends StatefulWidget {
 class _ReportIncidentState extends State<ReportIncident> {
   final TextEditingController dateController = TextEditingController();
   final TextEditingController schoolNameController = TextEditingController();
-  final TextEditingController provinceDropDownController = TextEditingController();
+  final TextEditingController provinceDropDownController =
+      TextEditingController();
   final TextEditingController gradeLevelController = TextEditingController();
-  final TextEditingController typeOfBullyingController = TextEditingController();
+  final TextEditingController typeOfBullyingController =
+      TextEditingController();
   final TextEditingController longTextController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Report Incident',
-          style: TextUse.heading_1().copyWith(color: ColorsUse.secondaryColor),
+        title: Padding(
+          padding: const EdgeInsets.only(bottom: 12.0),
+          child: Text(
+            'Report Incident',
+            style:
+                TextUse.heading_1().copyWith(color: ColorsUse.secondaryColor),
+          ),
         ),
         backgroundColor: ColorsUse.primaryColor,
         centerTitle: true,
-        toolbarHeight: 80,
+        toolbarHeight: 50,
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
@@ -51,14 +56,16 @@ class _ReportIncidentState extends State<ReportIncident> {
               description: 'School Name',
               placeholder: 'Enter Your School Name',
               controller: schoolNameController,
-              descriptionTextStyle: TextUse.heading_2().copyWith(color: ColorsUse.accentColor),
+              descriptionTextStyle:
+                  TextUse.heading_2().copyWith(color: ColorsUse.accentColor),
             ),
             const SizedBox(height: 16),
             CustomTextFormField(
               description: 'Province',
               placeholder: 'Select Your Province',
               controller: provinceDropDownController,
-              descriptionTextStyle: TextUse.heading_2().copyWith(color: ColorsUse.accentColor),
+              descriptionTextStyle:
+                  TextUse.heading_2().copyWith(color: ColorsUse.accentColor),
               dropdownItems: const [
                 'Bangkok',
                 'Amnat Charoen',
@@ -143,7 +150,8 @@ class _ReportIncidentState extends State<ReportIncident> {
               description: 'Grade Level',
               placeholder: 'Select Your Grade Level',
               controller: gradeLevelController,
-              descriptionTextStyle: TextUse.heading_2().copyWith(color: ColorsUse.accentColor),
+              descriptionTextStyle:
+                  TextUse.heading_2().copyWith(color: ColorsUse.accentColor),
               dropdownItems: const [
                 'Grade 1',
                 'Grade 2',
@@ -164,7 +172,8 @@ class _ReportIncidentState extends State<ReportIncident> {
               description: 'Type of Bullying',
               placeholder: 'Select the Type of Bullying',
               controller: typeOfBullyingController,
-              descriptionTextStyle: TextUse.heading_2().copyWith(color: ColorsUse.accentColor),
+              descriptionTextStyle:
+                  TextUse.heading_2().copyWith(color: ColorsUse.accentColor),
               dropdownItems: const [
                 'Physical Bullying',
                 'Sexual Bullying',
@@ -180,10 +189,13 @@ class _ReportIncidentState extends State<ReportIncident> {
             const SizedBox(height: 16),
             CustomLongTextFormField(
               description: 'Tell us what happened?',
-              placeholder: 'Tell Us What Happened. The More Details You Provide, The Better We Can Help.',
+              placeholder:
+                  'Tell Us What Happened. The More Details You Provide, The Better We Can Help.',
               controller: longTextController,
-              descriptionTextStyle: TextUse.heading_1().copyWith(color: ColorsUse.accentColor),
-              inputTextStyle: TextUse.heading_3().copyWith(color: ColorsUse.accentColor),
+              descriptionTextStyle:
+                  TextUse.heading_1().copyWith(color: ColorsUse.accentColor),
+              inputTextStyle:
+                  TextUse.heading_3().copyWith(color: ColorsUse.accentColor),
             ),
             const SizedBox(height: 16),
             const Center(
@@ -200,7 +212,7 @@ class _ReportIncidentState extends State<ReportIncident> {
           ],
         ),
       ),
-      //bottomNavigationBar: const BottomNavbar(initialIndex: 1), //This is the part I am struggling. 
+      //bottomNavigationBar: const BottomNavbar(initialIndex: 1), //This is the part I am struggling.
     );
   }
 }
