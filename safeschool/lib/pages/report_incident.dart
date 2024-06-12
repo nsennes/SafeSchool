@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:safeschool/Utilities/colors_use.dart';
 import 'package:safeschool/Utilities/text_use.dart';
-import 'package:safeschool/Widgets/bottom_navbar.dart';
 import 'package:safeschool/components/date_form_fields.dart';
 import 'package:safeschool/components/text_form_fields.dart';
 import 'package:safeschool/components/long_text_form_field.dart';
@@ -212,7 +211,6 @@ class _ReportIncidentState extends State<ReportIncident> {
           ],
         ),
       ),
-      //bottomNavigationBar: const BottomNavbar(initialIndex: 1), //This is the part I am struggling.
     );
   }
 }

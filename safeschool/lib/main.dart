@@ -14,6 +14,9 @@ import 'package:safeschool/pages/bullying_types/physical.dart';
 import 'package:safeschool/pages/bullying_types/verbal.dart';
 import 'package:safeschool/pages/bullying_types/cyber.dart';
 import 'package:safeschool/pages/bullying_types/sexual_h.dart';
+import 'package:safeschool/pages/help.dart';
+import 'package:safeschool/pages/home.dart';
+import 'package:safeschool/pages/home_page.dart';
 import 'package:safeschool/registrations/register_page.dart';
 import 'package:safeschool/pages/report_incident.dart';
 
