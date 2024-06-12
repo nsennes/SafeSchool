@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:safeschool/Utilities/colors_use.dart';
+import 'package:safeschool/Widgets/bottom_navbar.dart';
 //import 'package:safeschool/Widgets/bottom_navbar.dart';
 //import 'package:safeschool/Utilities/text_use.dart';
 //import 'package:safeschool/components/text_form_fields.dart';
@@ -15,7 +16,6 @@ import 'package:safeschool/pages/bullying_types/cyber.dart';
 import 'package:safeschool/pages/bullying_types/sexual_h.dart';
 import 'package:safeschool/registrations/register_page.dart';
 import 'package:safeschool/pages/report_incident.dart';
-
 
 void main() {
   runApp(MyApp());
@@ -48,8 +48,13 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: "Rubik",
       ),
-
-      home: const ReportIncident(),
+      routes: {
+        '/bullying_types/physical': (context) => const Physical(),
+        '/bullying_types/verbal': (context) => const Verbal(),
+        '/bullying_types/cyber': (context) => const Cyber(),
+        '/bullying_types/sexual_h': (context) => const SexualH(),
+      },
+      home: const BottomNavbar(),
     );
   }
 }
