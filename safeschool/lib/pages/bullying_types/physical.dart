@@ -43,8 +43,20 @@ class Physical extends StatelessWidget {
                         child:
                             Image.asset("assets/images/physical_Bullying.png"),
                       ),
-                    )
+                    ),
                   ],
+                ),
+                Positioned(
+                  top: 40,
+                  left: 10,
+                  child: IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: const Icon(
+                        Icons.arrow_back_ios_new_rounded,
+                        color: ColorsUse.secondaryColor,
+                      )),
                 )
               ],
             ),
@@ -99,10 +111,10 @@ class Physical extends StatelessWidget {
               child: Text(
                 "Signs of Physical Bullying",
                 style: TextUse.heading_2()
-                    .merge(TextStyle(color: ColorsUse.accentColor)),
+                    .merge(const TextStyle(color: ColorsUse.accentColor)),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Padding(
@@ -118,7 +130,7 @@ class Physical extends StatelessWidget {
                     child: Text(
                       "\u2022 Unexplained bruises, cuts, scrapes, or other injuries\n\u2022 Torn or damaged clothing\n\u2022 Frequent loss of belongings\n\u2022 Complaints of stomach aches, headaches, or other physical ailments (may be psychosomatic)\n\u2022 Change in eating habits (not wanting to eat lunch, loss of appetite)\n\u2022 Trouble sleeping or nightmares\n\u2022 Withdrawing from social activities or refusing to go to school",
                       style: TextUse.body()
-                          .merge(TextStyle(color: ColorsUse.accentColor)),
+                          .merge(const TextStyle(color: ColorsUse.accentColor)),
                     )),
               ),
             ),
@@ -127,30 +139,102 @@ class Physical extends StatelessWidget {
               child: Text(
                 "What to Do if You Are Experiencing Physical Bullying",
                 style: TextUse.heading_2()
-                    .merge(TextStyle(color: ColorsUse.accentColor)),
+                    .merge(const TextStyle(color: ColorsUse.accentColor)),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 38),
               child: Container(
-                height: 230,
+                height: 260,
                 width: 320,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: ColorsUse.secondaryColor),
                 child: Padding(
                     padding: const EdgeInsets.all(20.0),
-                    child: Text(
-                      "\u2022 Unexplained bruises, cuts, scrapes, or other injuries\n\u2022 Torn or damaged clothing\n\u2022 Frequent loss of belongings\n\u2022 Complaints of stomach aches, headaches, or other physical ailments (may be psychosomatic)\n\u2022 Change in eating habits (not wanting to eat lunch, loss of appetite)\n\u2022 Trouble sleeping or nightmares\n\u2022 Withdrawing from social activities or refusing to go to school",
-                      style: TextUse.body()
-                          .merge(TextStyle(color: ColorsUse.accentColor)),
+                    child: Column(
+                      children: [
+                        RichText(
+                          text: TextSpan(
+                            text: 'Stay safe: ',
+                            style: TextUse.body().merge(const TextStyle(
+                                color: ColorsUse.primaryColor,
+                                fontWeight: FontWeight.w500)),
+                            children: const <TextSpan>[
+                              TextSpan(
+                                  text:
+                                      'If you are in immediate danger, try to move away from the situation and find a safe place to go. You can report it to a trusted adult or call for help.',
+                                  style: TextStyle(
+                                      color: ColorsUse.accentColor,
+                                      fontWeight: FontWeight.w400)),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        RichText(
+                          text: TextSpan(
+                            text: 'Tell someone you trust: ',
+                            style: TextUse.body().merge(const TextStyle(
+                                color: ColorsUse.primaryColor,
+                                fontWeight: FontWeight.w500)),
+                            children: const <TextSpan>[
+                              TextSpan(
+                                  text:
+                                      'Talk to a parent, teacher, counselor, or another trusted adult about what is happening.',
+                                  style: TextStyle(
+                                      color: ColorsUse.accentColor,
+                                      fontWeight: FontWeight.w400)),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        RichText(
+                          text: TextSpan(
+                            text: 'Don\'t fight back: ',
+                            style: TextUse.body().merge(const TextStyle(
+                                color: ColorsUse.primaryColor,
+                                fontWeight: FontWeight.w500)),
+                            children: const <TextSpan>[
+                              TextSpan(
+                                  text:
+                                      'Fighting back might escalate the situation. It\'s better to walk away and report the bullying.',
+                                  style: TextStyle(
+                                      color: ColorsUse.accentColor,
+                                      fontWeight: FontWeight.w400)),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        RichText(
+                          text: TextSpan(
+                            text: 'Remember, you\'re not alone: ',
+                            style: TextUse.body().merge(const TextStyle(
+                                color: ColorsUse.primaryColor,
+                                fontWeight: FontWeight.w500)),
+                            children: const <TextSpan>[
+                              TextSpan(
+                                  text:
+                                      'There are people who care about you and want to help.',
+                                  style: TextStyle(
+                                      color: ColorsUse.accentColor,
+                                      fontWeight: FontWeight.w400)),
+                            ],
+                          ),
+                        ),
+                      ],
                     )),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
           ],
