@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:safeschool_admin/Utilities/colors_use.dart';
 import 'package:safeschool_admin/Widgets/bottom_navbar.dart';
+import 'package:safeschool_admin/pages/report_incident.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,6 +31,9 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: "Rubik",
       ),
+      routes: {
+        '/report_incident': (context) => ReportIncident(),
+      },
       home: BottomNavbar(),
     );
   }
