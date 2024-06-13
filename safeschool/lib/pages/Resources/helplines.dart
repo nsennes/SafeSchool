@@ -143,38 +143,49 @@ class HotlineInfos extends StatelessWidget {
 
   const HotlineInfos({super.key, required this.name, required this.ph_num});
 
+  Future<void> _launchDialer() async {
+    final Uri uri = Uri(scheme: 'tel', path: ph_num);
+    if (!await launchUrl(uri)) {
+      throw 'Could not launch $ph_num';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 8.0, left: 30),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            name,
-            style: TextUse.heading_3().merge(
-                const TextStyle(fontSize: 12, color: ColorsUse.primaryColor)),
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          Container(
-            height: 50,
-            width: 330,
-            decoration: BoxDecoration(
+      child: GestureDetector(
+        onTap: () => _launchDialer,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              name,
+              style: TextUse.heading_3().merge(
+                  const TextStyle(fontSize: 12, color: ColorsUse.primaryColor)),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            Container(
+              height: 50,
+              width: 330,
+              decoration: BoxDecoration(
                 color: ColorsUse.secondaryColor,
-                borderRadius: BorderRadius.circular(10)),
-            child: Padding(
-              padding: const EdgeInsets.only(top: 15.0, left: 20),
-              child: Text(
-                ph_num,
-                style: TextUse.body().merge(
-                  const TextStyle(color: ColorsUse.accentColor),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 15.0, left: 20),
+                child: Text(
+                  ph_num,
+                  style: TextUse.body().merge(
+                    const TextStyle(color: ColorsUse.accentColor),
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
