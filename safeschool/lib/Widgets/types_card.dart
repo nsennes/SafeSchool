@@ -20,7 +20,7 @@ class TypesCard extends StatelessWidget {
       padding: const EdgeInsets.only(left: 30.0),
       child: InkWell(
         borderRadius: BorderRadius.circular(10),
-        onTap: onTap, // Just pass onTap directly
+        onTap: onTap,
         splashColor: const Color.fromARGB(255, 236, 236, 233),
         child: Ink(
           height: 180,
