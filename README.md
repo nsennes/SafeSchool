@@ -8,5 +8,5 @@ Safeschool is an innovative app designed to combat bullying in schools, supporti
 - Educational Resources: Interactive modules on bullying prevention and awareness.
 - Support Resources: Access to counseling services, coping strategies, and peer support networks.
 ## 📎Acknowledgements
-This project is a collaborative effort developed for our CSC291 class. Special thanks to my friends:
-[@andhikark](https://github.com/andhikark) [@lawrencenuu](https://github.com/lawrencenuu)
+This project is a collaborative effort developed for our CSC291 class. Contributed by:
+[@andhikark](https://github.com/andhikark) [@lawrencenuu](https://github.com/lawrencenuu) [@nsennes](https://github.com/nsennes)
