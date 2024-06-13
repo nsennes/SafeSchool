@@ -11,7 +11,7 @@ class TypesCard extends StatelessWidget {
     Key? key,
     required this.title,
     required this.img,
-    required this.onTap,
+    this.onTap,
   }) : super(key: key);
 
   @override

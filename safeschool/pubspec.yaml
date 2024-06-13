@@ -71,6 +71,15 @@ flutter:
     - assets/images/a1.jpg
     - assets/images/a2.jpg
     - assets/images/a3.png
+    - assets/images/hotline1.png
+    - assets/images/hotline2.png
+    - assets/images/hotline3.png
+    - assets/images/hotline4.png
+    - assets/images/doc1.png
+    - assets/images/doc2.png
+
+
+    
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
